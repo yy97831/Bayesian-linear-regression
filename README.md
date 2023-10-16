@@ -53,6 +53,3 @@ The code generates contour plots for the likelihood and posterior at different s
 
 - **Beta (\`beta\` in \`compute_likelihood\` and \`update_posterior\`)**: This is the precision parameter for the Gaussian likelihood function.
 
----
-
-Feel free to clone this repository and modify the code as per your requirements!
