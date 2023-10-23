@@ -1,6 +1,6 @@
 # Bayesian Linear Regression Example
 
-This Python code demonstrates how Bayesian linear regression works using synthetic data. The code generates plots at different stages of the Bayesian update process, showcasing how the likelihood, prior, and posterior distributions evolve.
+This Python code demonstrates the principle of Bayesian linear regression using synthetic data. It visualizes the evolution of the likelihood, prior, and posterior distributions through various stages of the Bayesian updating process.
 
 ## Requirements
 
@@ -9,7 +9,7 @@ This Python code demonstrates how Bayesian linear regression works using synthet
 - Matplotlib
 - SciPy
 
-You can install these packages using pip:
+To install these packages, use pip:
 
 ```bash
 pip install numpy matplotlib scipy
@@ -17,7 +17,7 @@ pip install numpy matplotlib scipy
 
 ## Quick Start
 
-To run the code, simply execute the Python script:
+To execute the example:
 
 ```bash
 python bayesian_linear_regression_example.py
@@ -25,31 +25,28 @@ python bayesian_linear_regression_example.py
 
 ## How It Works
 
-### Import Required Libraries
+### Importing Necessary Libraries
 
-The code uses NumPy for numerical operations, Matplotlib for plotting, and SciPy for statistical functions.
+The script utilizes NumPy for numerical computations, Matplotlib for visual representation, and SciPy for accessing statistical functions.
 
-### Generate Synthetic Data
+### Synthetic Data Generation
 
-The code creates synthetic data for linear regression using a true slope (\`true_w1\`) and intercept (\`true_w0\`). Gaussian noise is added to simulate real-world observations.
+We generate synthetic linear regression data, determined by a predefined slope (`true_w1`) and intercept (`true_w0`). Gaussian noise is introduced to emulate real-world data variations.
 
-### Bayesian Update Functions
+### Bayesian Update Mechanism
 
-1. **compute_likelihood**: Given a single data point, this function computes the likelihood of various combinations of slope and intercept (\`w0\` and \`w1\`).
+1. **update_posterior_analytically**: This function calculates the analytical posterior distribution for the coefficients `w0` (intercept) and `w1` (slope) given observed data points. The update considers the likelihood arising from new data and the prior distribution.
 
-2. **update_posterior**: This function takes all observed data points and updates the posterior distribution for \`w0\` and \`w1\` based on the prior and likelihood.
+### Visualization
 
-### Plotting
+The visualization includes contour plots showcasing the likelihood and the posterior distribution at distinct stages of data assimilation. Additionally, it draws lines sampled from these distributions, providing a visual perspective on the evolving estimates of `w0` and `w1`.
 
-The code generates contour plots for the likelihood and posterior at different stages of data collection. It also samples lines from these distributions to give a visual sense of the current estimates for \`w0\` and \`w1\`.
+## Personalizing the Code
 
-## Customizing the Code
-
-- **Number of Data Points (\`N\`)**: You can change the value of \`N\` to use more or fewer data points.
+- **Data Points Count (`N`)**: Modify the value of `N` to alter the number of data points.
   
-- **Initial Prior (\`prior_mean\` and \`prior_cov\`)**: The mean and covariance of the initial prior can be adjusted.
+- **Initial Prior (`prior_mean` and `prior_cov`)**: The starting mean and covariance for the prior can be adjusted.
 
-- **Noise Level (\`scale\` in \`np.random.normal\`)**: The amount of noise added to the synthetic data can be changed.
+- **Noise Intensity (`scale` in `np.random.normal`)**: Regulate the noise level incorporated in the synthetic dataset.
 
-- **Beta (\`beta\` in \`compute_likelihood\` and \`update_posterior\`)**: This is the precision parameter for the Gaussian likelihood function.
-
+- **Beta (`beta` in `update_posterior_analytically`)**: Represents the precision of the Gaussian likelihood function.
