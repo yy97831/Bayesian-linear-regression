@@ -35,7 +35,7 @@ We generate synthetic linear regression data, determined by a predefined slope (
 
 ### Bayesian Update Mechanism
 
-1. **update_posterior_analytically**: This function calculates the analytical posterior distribution for the coefficients `w0` (intercept) and `w1` (slope) given observed data points. The update considers the likelihood arising from new data and the prior distribution.
+**update_posterior_analytically**: This function calculates the analytical posterior distribution for the coefficients `w0` (intercept) and `w1` (slope) given observed data points. The update considers the likelihood arising from new data and the prior distribution.
 
 ### Visualization
 
